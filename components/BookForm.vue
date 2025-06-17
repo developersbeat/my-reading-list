@@ -3,23 +3,25 @@
     <UForm :state="form" @submit.prevent="submit" class="space-y-5">
       <!-- Title Field -->
       <div>
-        <label for="title" class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+        <label for="title" class="block text-md font-medium text-[#ffffff] mb-1">Title</label>
         <UInput
           id="title"
           v-model="form.title"
           placeholder="e.g. Atomic Habits"
           required
+          class="w-[100%]"
         />
       </div>
 
       <!-- Author Field -->
       <div>
-        <label for="author" class="block text-sm font-medium text-gray-700 mb-1">Author</label>
+        <label for="author" class="block text-md font-medium text-[#ffffff] mb-1">Author</label>
         <UInput
           id="author"
           v-model="form.author"
           placeholder="e.g. James Clear"
           required
+          class="w-[100%]"
         />
       </div>
 

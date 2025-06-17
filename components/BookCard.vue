@@ -1,12 +1,12 @@
 <template>
-  <UCard class="shadow-md hover:shadow-lg transition-all duration-200">
+  <UCard class="shadow-md transition-all duration-200 bg-[#172237]/60 backdrop-blur-md rounded-xl border-r border-b border-white/15">
     <div class="flex justify-between items-center">
       <!-- Left: Book Info -->
       <div>
-        <p class="text-lg font-semibold text-gray-800">{{ book.title }}</p>
-        <p class="text-sm text-gray-500">{{ book.author }}</p>
-        <p class="text-xs mt-1" :class="status ? 'text-green-600' : 'text-yellow-500'">
-          {{ status ? '✔ Read' : '📖 Unread' }}
+        <p class="text-2xl font-semibold text-[#ffffff]">{{ book.title }}  {{ status ? '✔' : '' }}</p> 
+        <p class="text-md text-[#ffffff]/80 pb-4">{{ book.author }}</p>
+        <p class="text-md mt-1 font-bold" :class="status ? 'text-green-600' : 'text-yellow-500'">
+          {{ status ? 'Read' : 'Unread' }}
         </p>
       </div>
 
@@ -18,13 +18,13 @@
           @change="toggleStatus"
           color="primary"
           size="sm"
-          on-icon="i-heroicons-check"
-          off-icon="i-heroicons-book-open"
+          :on-icon="i-heroicons-check"
+          :off-icon="i-heroicons-book-open"
           aria-label="Toggle read status"
         />
 
         <!-- Nuxt UI Trash Button with Tooltip -->
-        <UTooltip text="Delete Book">
+        <!-- <UTooltip text="Delete Book"> -->
           <UButton
             icon="i-heroicons-trash"
             size="sm"
@@ -32,8 +32,9 @@
             variant="ghost"
             @click="deleteBook"
             aria-label="Delete book"
+            class="cursor-pointer hover:scale-[1.1] hover:text-[#f20f0f] transition-transform duration-100"
           />
-        </UTooltip>
+        <!-- </UTooltip> -->
       </div>
     </div>
   </UCard>

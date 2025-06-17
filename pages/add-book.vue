@@ -2,8 +2,8 @@
   <div class="max-w-xl mx-auto space-y-6">
     <!-- Heading -->
     <div class="text-center">
-      <h2 class="text-2xl font-bold text-gray-800">Add a New Book</h2>
-      <p class="text-sm text-gray-500 mt-1">Just title and author — we’ll handle the rest.</p>
+      <h2 class="text-2xl font-bold text-[#ffffff]">Add a New Book</h2>
+      <p class="text-sm text-[#ffffff]/50 mt-1">Just title and author — we’ll handle the rest.</p>
     </div>
 
     <!-- Form -->

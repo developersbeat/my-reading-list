@@ -20,18 +20,20 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import BookCard from '@/components/BookCard.vue'
+import { ref, onMounted } from "vue";
+import BookCard from "@/components/BookCard.vue";
 
-const books = ref([])
+const books = ref([]);
 
 const fetchBooks = async () => {
   try {
-    books.value = await $fetch('/api/books')
+    const result = await $fetch("/api/books");
+    console.log("Fetched books:", result);
+    books.value = result;
   } catch (err) {
-    console.error('Error fetching books:', err)
+    console.error("Error fetching books:", err);
   }
-}
+};
 
-onMounted(fetchBooks)
+onMounted(fetchBooks);
 </script>

@@ -1,28 +1,100 @@
-# 📚 My Reading List
+# My Reading List
 
 A simple full-stack reading list app built using **Nuxt 3**, **Nuxt UI**, and **SQLite**. This app allows users to add, view, mark as read/unread, and delete books from their personal reading list.
 
 ---
 
-## 🚀 Features
+## Features
 
 - View all books with title, author, and read/unread status
 - Add a new book to the list
 - Toggle a book’s read/unread status
 - Delete a book from the list
 - Lightweight UI with Nuxt UI components
-- Backend powered by Nuxt server routes + SQLite
+- Data stored in **SQLite** using Nuxt server routes
 
 ---
 
-## 🧰 Tech Stack
+## Technology Used
 
-- **Nuxt 3** (Vue 3)
-- **Nuxt UI** (for UI components)
-- **SQLite** (lightweight SQL database)
-- **Nuxt Server API Routes** (`/server/api/`)
+- **Nuxt 3** (Vue 3) - Frontend
+- **Nuxt UI** (for UI components) - Frontend
+- **Tailwind** (for css) - Frontend
+- **SQLite** (lightweight SQL database) - Database
+- **Nuxt Server API Routes** (`/server/api/`) - Backend APIs
 
 ---
 
-## 📁 Project Structure
+## Installation
 
+```bash
+git clone https://github.com/developersbeat/my-reading-list.git
+cd my-reading-list
+npm install
+```
+
+---
+
+## Development
+
+```bash
+npm run dev
+```
+
+Open your browser at: [http://localhost:3000](http://localhost:3000)
+
+---
+
+---
+
+## Project Structure
+
+```bash
+├── components/
+│   ├── BookForm.vue         # Displays the form to enter a new book card
+│   └── BookCard.vue         # Displays each book card with toggle + delete
+├── layouts/
+│   └── default.vue          # App layout with navigation
+├── pages/
+│   ├── index.vue            # Lists all books
+│   └── add-book.vue         # Add a new book form page
+├── server/
+│   ├── api/
+│   │   └── books/
+│   │     ├── index.get.ts   # GET and POST books
+│   │     ├── index.post.ts
+│   │     ├── [id].put.ts    # PUT and DELETE by ID 
+│   │     └── [id].delete.ts      
+│   ├── utils/
+│         └── db.js          # SQLite DB connection and helper
+├── app.vue                  # Root app entry
+├── nuxt.config.ts           # Nuxt config with Nuxt UI and Tailwind
+├── package.json             # All the packages
+└── README.md
+```
+
+---
+
+## SQLite Database
+
+SQLite is used as a lightweight local database. Books are stored in a `books` table with the following fields:
+
+| Field     | Type    | Description          |
+|-----------|---------|----------------------|
+| id        | INTEGER | Primary key          |
+| title     | TEXT    | Book title           |
+| author    | TEXT    | Book author          |
+| is_read   | INTEGER | 1 = Read, 0 = Unread |
+
+The database is automatically created at runtime if it doesn't exist.
+
+---
+
+## Deploy
+
+To build for production:
+
+```bash
+npm run build
+npm run preview
+```
