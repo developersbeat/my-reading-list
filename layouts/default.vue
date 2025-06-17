@@ -4,8 +4,7 @@
     <div
       class="min-h-screen py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1b243a] via-[#2f3b5a] via-60% to-[#1E2129]"
     >
-      <div class="max-w-3xl mx-auto space-y-8">
-        <!-- App Header -->
+      <div class="max-w-4xl mx-auto space-y-8">
         <header class="flex justify-between items-center border-b pb-4">
           <h1 class="text-3xl font-bold text-white-800">My Reading List</h1>
 

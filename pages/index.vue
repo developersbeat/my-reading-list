@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-4">
-    <!-- Empty State -->
+    <!-- If no book added yet -->
     <div
       v-if="books.length === 0"
       class="text-center text-gray-400 text-sm mt-12"
@@ -8,7 +8,7 @@
       No books yet. Click "Add Book" to get started!
     </div>
 
-    <!-- Book List -->
+    <!-- Book's Cards -->
     <BookCard
       v-for="book in books"
       :key="book.id"

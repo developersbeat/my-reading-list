@@ -1,9 +1,11 @@
+//component/BookCard.vue
+
 <template>
   <UCard
     class="shadow-md transition-all duration-200 bg-[#172237]/60 backdrop-blur-md rounded-xl border-r border-b border-white/15"
   >
     <div class="flex justify-between items-center">
-      <!-- Left: Book Info -->
+      <!-- Book Info -->
       <div class="flex flex-col min-h-[6rem] space-y-1 break-words">
         <p
           class="text-2xl font-semibold text-white break-words whitespace-normal"
@@ -21,21 +23,18 @@
         </p>
       </div>
 
-      <!-- Right: Actions -->
+      <!-- Actions (right side) -->
       <div class="flex items-center gap-3">
-        <!-- Nuxt UI Toggle (as Switch) -->
         <USwitch
           v-model="status"
           @change="toggleStatus"
           color="primary"
           size="sm"
-          :on-icon="i - heroicons - check"
-          :off-icon="i - heroicons - book - open"
+          :on-icon="'i - heroicons - check'"
+          :off-icon="'i - heroicons - book - open'"
           aria-label="Toggle read status"
         />
 
-        <!-- Nuxt UI Trash Button with Tooltip -->
-        <!-- <UTooltip text="Delete Book"> -->
         <UButton
           icon="i-heroicons-trash"
           size="sm"
@@ -45,7 +44,6 @@
           aria-label="Delete book"
           class="cursor-pointer hover:scale-[1.1] hover:text-[#f20f0f] transition-transform duration-100"
         />
-        <!-- </UTooltip> -->
       </div>
     </div>
   </UCard>

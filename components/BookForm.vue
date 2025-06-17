@@ -1,7 +1,7 @@
 <template>
   <UCard class="p-6 shadow-md">
     <UForm :state="form" @submit.prevent="submit" class="space-y-5">
-      <!-- Title Field -->
+      <!-- Book Title Input Field -->
       <div>
         <label for="title" class="block text-md font-medium text-[#ffffff] mb-1">Title</label>
         <UInput
@@ -13,7 +13,7 @@
         />
       </div>
 
-      <!-- Author Field -->
+      <!-- Author Input Field -->
       <div>
         <label for="author" class="block text-md font-medium text-[#ffffff] mb-1">Author</label>
         <UInput
@@ -25,7 +25,6 @@
         />
       </div>
 
-      <!-- Submit Button -->
       <UButton
         type="submit"
         block
