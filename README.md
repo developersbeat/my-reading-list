@@ -87,6 +87,42 @@ SQLite is used as a lightweight local database. Books are stored in a `books` ta
 | is_read   | INTEGER | 1 = Read, 0 = Unread |
 
 The database is automatically created at runtime if it doesn't exist.
+If it doesn't: 
+
+### Step 1: Open SQLite CLI
+
+If you have SQLite installed, run the following command in your terminal:
+
+```bash
+sqlite3 books.db
+```
+
+### Step 2: Create the books Table
+
+Paste the following SQL statment
+
+```bash
+CREATE TABLE IF NOT EXISTS books (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  author TEXT NOT NULL,
+  is_read INTEGER DEFAULT 0
+);
+```
+
+This will create the table. 
+
+### Step 3: To Verify
+
+- This will list all the tables
+```bash
+.tables
+```
+
+- This will disclose the schema of the table (books)
+```bash
+.schema books
+```
 
 ---
 
