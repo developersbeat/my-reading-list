@@ -1,75 +1,28 @@
-# Nuxt Minimal Starter
+# 📚 My Reading List
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple full-stack reading list app built using **Nuxt 3**, **Nuxt UI**, and **SQLite**. This app allows users to add, view, mark as read/unread, and delete books from their personal reading list.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 🚀 Features
 
-```bash
-# npm
-npm install
+- View all books with title, author, and read/unread status
+- Add a new book to the list
+- Toggle a book’s read/unread status
+- Delete a book from the list
+- Lightweight UI with Nuxt UI components
+- Backend powered by Nuxt server routes + SQLite
 
-# pnpm
-pnpm install
+---
 
-# yarn
-yarn install
+## 🧰 Tech Stack
 
-# bun
-bun install
-```
+- **Nuxt 3** (Vue 3)
+- **Nuxt UI** (for UI components)
+- **SQLite** (lightweight SQL database)
+- **Nuxt Server API Routes** (`/server/api/`)
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+## 📁 Project Structure
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
