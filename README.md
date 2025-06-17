@@ -11,17 +11,7 @@ A simple full-stack reading list app built using **Nuxt 3**, **Nuxt UI**, and **
 - Toggle a book’s read/unread status
 - Delete a book from the list
 - Lightweight UI with Nuxt UI components
-- Data stored in **SQLite** using Nuxt server routes
-
----
-
-## Technology Used
-
-- **Nuxt 3** (Vue 3) - Frontend
-- **Nuxt UI** (for UI components) - Frontend
-- **Tailwind** (for css) - Frontend
-- **SQLite** (lightweight SQL database) - Database
-- **Nuxt Server API Routes** (`/server/api/`) - Backend APIs
+- Data stored in **SQLite**
 
 ---
 
@@ -44,34 +34,6 @@ npm run dev
 Open your browser at: [http://localhost:3000](http://localhost:3000)
 
 ---
-
----
-
-## Project Structure
-
-```bash
-├── components/
-│   ├── BookForm.vue         # Displays the form to enter a new book card
-│   └── BookCard.vue         # Displays each book card with toggle + delete
-├── layouts/
-│   └── default.vue          # App layout with navigation
-├── pages/
-│   ├── index.vue            # Lists all books
-│   └── add-book.vue         # Add a new book form page
-├── server/
-│   ├── api/
-│   │   └── books/
-│   │     ├── index.get.ts   # GET and POST books
-│   │     ├── index.post.ts
-│   │     ├── [id].put.ts    # PUT and DELETE by ID 
-│   │     └── [id].delete.ts      
-│   ├── utils/
-│         └── db.js          # SQLite DB connection and helper
-├── app.vue                  # Root app entry
-├── nuxt.config.ts           # Nuxt config with Nuxt UI and Tailwind
-├── package.json             # All the packages
-└── README.md
-```
 
 ---
 
@@ -134,3 +96,10 @@ To build for production:
 npm run build
 npm run preview
 ```
+
+---
+
+### Notes
+- Used Next UI + Tailwind to make the styling work easy.
+
+---
